@@ -1,7 +1,15 @@
 import { Container, Row, Col, Image } from 'react-bootstrap';
-
+import SEO from '../components/common/SEO'
+import LazyImage from '../components/common/LazyImage';
 const About = () => {
   return (
+    <>
+      <SEO
+        title="About Us - Our Story & Mission"
+        description="Learn about Nerdware Technologies' journey, mission, and the expert team behind innovative web development solutions."
+        keywords="about nerdware, web development team, company mission, technology experts"
+        url="/about"
+      />
     <main>
       {/* Hero Section */}
       <section className="page-header bg-primary text-white py-5 mb-5">
@@ -20,11 +28,10 @@ const About = () => {
         <Container>
           <Row className="align-items-center mb-5">
             <Col lg={6} className="mb-4 mb-lg-0">
-              <Image 
-                src="https://i.imgur.com/VPocvDW.png" 
-                alt="About Nerdware System Technologies" 
-                fluid 
-                className="rounded shadow-sm"
+              <LazyImage
+                src="/nerdware.png"
+                alt="About Nerdware System Technologies"
+                className="rounded"
               />
             </Col>
             <Col lg={6}>
@@ -94,6 +101,7 @@ const About = () => {
         </Container>
       </section>
     </main>
+    </>
   );
 };
 

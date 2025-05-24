@@ -110,10 +110,12 @@ body {
 }
 
 .navbar-scrolled .nav-link.active {
-  color: var(--primary-color) !important;
+  color: var(--secondary-color) !important;
   font-weight: 600;
 }
-
+.navbar-expanded .nav-link {
+  color: var(--secondary-color) !important; 
+}
 /* Hero Section */
 .hero-section {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
@@ -136,14 +138,14 @@ body {
 
 /* Section Styles */
 .section-title {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 700;
   color: var(--secondary-color);
   margin-bottom: 1rem;
 }
 
 .section-description {
-  font-size: 1.1rem;
+  font-size: 2.1rem;
   color: var(--dark-gray);
   margin-bottom: 2rem;
 }

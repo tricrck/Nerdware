@@ -1,5 +1,6 @@
-// src/pages/Blog.jsx
+import LazyImage from '../components/common/LazyImage';
 import { Container, Row, Col, Card, Badge } from 'react-bootstrap';
+import SEO from '../components/common/SEO'
 
 const Blog = () => {
   const blogPosts = [
@@ -71,6 +72,13 @@ const Blog = () => {
   };
 
   return (
+    <>
+      <SEO
+        title="Our Blog - Latest Insights & Trends"
+        description="Stay updated with the latest insights, trends, and tips from our experts in web development, mobile apps, and digital solutions."
+        keywords="blog, web development, mobile apps, SEO, technology trends"
+        url="/blog"
+      />
     <main>
       {/* Hero Section */}
       <section className="page-header bg-primary text-white py-5 mb-5">
@@ -91,11 +99,10 @@ const Blog = () => {
             {blogPosts.map((post) => (
               <Col key={post.id} lg={4} md={6} className="mb-5">
                 <Card className="blog-card h-100 border-0 shadow-sm">
-                  <Card.Img 
-                    variant="top" 
-                    src={post.image} 
+                  <LazyImage
+                    src={post.image}
                     alt={post.title}
-                    className="blog-image"
+                    className="blog-image rounded-top w-100 h-auto"
                   />
                   <Card.Body className="p-4">
                     <div className="d-flex justify-content-between align-items-center mb-2">
@@ -142,6 +149,7 @@ const Blog = () => {
         </Container>
       </section>
     </main>
+    </>
   );
 };
 

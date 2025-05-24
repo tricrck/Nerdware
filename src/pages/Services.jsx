@@ -1,6 +1,6 @@
-// src/pages/Services.jsx
+import SEO from '../components/common/SEO'
 import { Container, Row, Col, Card, ListGroup } from 'react-bootstrap';
-import { FaLaptopCode, FaMobileAlt, FaSearch, FaCheck } from 'react-icons/fa';
+import { FaLaptopCode, FaMobileAlt, FaSearch, FaCheck, FaChartBar, FaRobot } from 'react-icons/fa';
 
 const Services = () => {
   const services = [
@@ -45,10 +45,45 @@ const Services = () => {
         'Local SEO',
         'Performance Monitoring'
       ]
+    },
+    {
+      id: 4,
+      title: 'Data Analysis',
+      description: 'Turn data into insights to drive strategic decision-making.',
+      icon: <FaChartBar className="service-icon" size={50} />,
+      features: [
+        'Data Cleaning & Preprocessing',
+        'Dashboard & Report Generation',
+        'Descriptive & Predictive Analytics',
+        'KPI Monitoring',
+        'Custom Data Visualizations',
+        'Business Intelligence Integration'
+      ]
+    },
+    {
+      id: 5,
+      title: 'Automation',
+      description: 'Optimize operations by automating repetitive tasks.',
+      icon: <FaRobot className="service-icon" size={50} />,
+      features: [
+        'Workflow Automation',
+        'Process Mapping & Scripting',
+        'Integration with External Tools',
+        'Task Scheduling & Monitoring',
+        'Custom Bot Development',
+        'Efficiency & Cost Analysis'
+      ]
     }
   ];
 
   return (
+    <>
+      <SEO
+        title="Our Services"
+        description="Explore our comprehensive digital solutions designed to help your business thrive."
+        keywords="web development, mobile apps, SEO, data analysis, automation"
+        url="/services"
+      />
     <main>
       {/* Hero Section */}
       <section className="page-header bg-primary text-white py-5 mb-5">
@@ -142,6 +177,7 @@ const Services = () => {
         </Container>
       </section>
     </main>
+    </>
   );
 };
 

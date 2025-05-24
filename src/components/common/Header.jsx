@@ -1,9 +1,16 @@
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 const Header = () => {
+  const [expanded, setExpanded] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+
+  // Collapse navbar on route change
+  useEffect(() => {
+    setExpanded(false);
+  }, [location.pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,8 +29,11 @@ const Header = () => {
 
   return (
     <Navbar 
+      collapseOnSelect
       expand="lg" 
-      className={`fixed-top ${scrolled ? 'navbar-scrolled' : ''}`}
+      expanded={expanded}
+      onToggle={() => setExpanded(!expanded)}
+      className={`fixed-top ${scrolled ? 'navbar-scrolled' : ''} ${expanded ? 'navbar-expanded' : ''}`}
       variant={scrolled ? 'light' : 'dark'}
       bg={scrolled ? 'white' : 'transparent'}
     >
@@ -39,7 +49,7 @@ const Header = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
+          <Nav className="ms-auto" onClick={() => setExpanded(false)}>
             <Nav.Link as={NavLink} to="/" className="nav-link">Home</Nav.Link>
             <Nav.Link as={NavLink} to="/about" className="nav-link">About Us</Nav.Link>
             <Nav.Link as={NavLink} to="/services" className="nav-link">Services</Nav.Link>

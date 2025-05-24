@@ -1,7 +1,30 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import Sitemap from 'vite-plugin-sitemap';
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+  plugins: [
+    react(),
+    Sitemap({
+      hostname: 'https://nerdwaretechnologies.com',
+      dynamicRoutes: [
+        '/',
+        '/about',
+        '/services',
+        '/portfolio',
+        '/blog',
+        '/contact'
+      ]
+    })
+  ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom']
+        }
+      }
+    }
+  }
+});

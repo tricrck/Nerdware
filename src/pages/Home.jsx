@@ -1,3 +1,4 @@
+import SEO from '../components/common/SEO'
 import Hero from '../components/home/Hero';
 import Services from '../components/home/Services';
 import Features from '../components/home/Features';
@@ -7,6 +8,13 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
+    <>
+      <SEO
+        title="Professional Web Development Services"
+        description="Expert web development, mobile apps, and digital solutions. Transform your business with cutting-edge technology and innovative design."
+        keywords="web development, mobile apps, software development, digital solutions, technology consulting"
+        url="/"
+      />
     <main>
       <Hero />
       <Services />
@@ -32,6 +40,7 @@ const Home = () => {
         </Container>
       </section>
     </main>
+    </>
   );
 };
 

@@ -2,6 +2,7 @@ import { Container, Row, Col, Form, Button, Card, Alert } from 'react-bootstrap'
 import { useState, useRef } from 'react';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
+import SEO from '../components/common/SEO'
 
 const Contact = () => {
   const form = useRef();
@@ -31,6 +32,13 @@ const Contact = () => {
   };
 
   return (
+    <>
+      <SEO
+        title="Contact Us - Nerdware Technologies"
+        description="Get in touch with Nerdware Technologies for web development, mobile apps, and digital solutions. We're here to help you succeed."
+        keywords="contact, web development, mobile apps, digital solutions, Nerdware Technologies"
+        url="/contact"
+      />
     <main>
       {/* Hero Section */}
       <section className="page-header bg-primary text-white py-5 mb-5">
@@ -203,6 +211,7 @@ const Contact = () => {
         </Container>
       </section>
     </main>
+    </>
   );
 };
 
