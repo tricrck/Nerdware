@@ -128,7 +128,7 @@ const Portfolio = () => {
                   <LazyImage
                     src={project.image}
                     alt={project.title}
-                    className="portfolio-image rounded-top w-100 h-auto"
+                    className="portfolio-image img-fluid rounded-top w-100 h-auto"
                   />
                   <Card.Body className="p-4">
                     <div className="d-flex justify-content-between align-items-start mb-2">

@@ -34,8 +34,8 @@ const Header = () => {
       expanded={expanded}
       onToggle={() => setExpanded(!expanded)}
       className={`fixed-top ${scrolled ? 'navbar-scrolled' : ''} ${expanded ? 'navbar-expanded' : ''}`}
-      variant={scrolled ? 'light' : 'dark'}
-      bg={scrolled ? 'white' : 'transparent'}
+      variant={scrolled || expanded ? 'light' : 'dark'}
+      bg={scrolled || expanded ? 'white' : 'transparent'}
     >
       <Container>
         <Navbar.Brand as={Link} to="/">

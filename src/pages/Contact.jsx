@@ -8,12 +8,13 @@ const Contact = () => {
   const form = useRef();
   const [submitting, setSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [showError, setShowError] = useState(false);
 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    e.preventDefault();
     setSubmitting(true);
+    setShowError(false);
     
     emailjs
       .sendForm('service_robfegs', 'template_ee07y1j', form.current, {
@@ -23,9 +24,21 @@ const Contact = () => {
         () => {
           setSubmitting(false);
           setShowSuccess(true);
+           // Clear the form on successful submission
+          form.current.reset();
+          setTimeout(() => {
+            setShowSuccess(false);
+          }, 5000);
         },
         (error) => {
           console.log('FAILED...', error.text);
+          setSubmitting(false);
+          setShowError(true);
+          
+          // Auto-hide error message after 5 seconds
+          setTimeout(() => {
+            setShowError(false);
+          }, 5000);
         },
       );
     
@@ -67,7 +80,18 @@ const Contact = () => {
                       onClose={() => setShowSuccess(false)}
                       className="rounded-3"
                     >
-                      Message sent successfully! I'll respond within 24 hours.
+                      🎉 Message sent successfully! We'll respond within 24 hours.
+                    </Alert>
+                  )}
+                  
+                  {showError && (
+                    <Alert 
+                      variant="danger" 
+                      dismissible 
+                      onClose={() => setShowError(false)}
+                      className="rounded-3"
+                    >
+                      ❌ Failed to send message. Please try again or contact us directly.
                     </Alert>
                   )}
                   <h2 className="mb-4">Send us a Message</h2>
@@ -132,8 +156,21 @@ const Contact = () => {
                       />
                     </Form.Group>
                     
-                    <Button type="submit" variant="primary" size="lg" disabled={submitting}>
-                      Send Message
+                    <Button 
+                      type="submit" 
+                      variant="primary" 
+                      size="lg" 
+                      disabled={submitting}
+                      className="position-relative"
+                    >
+                      {submitting ? (
+                        <>
+                          <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                          Sending...
+                        </>
+                      ) : (
+                        'Send Message'
+                      )}
                     </Button>
                   </Form>
                 </Card.Body>

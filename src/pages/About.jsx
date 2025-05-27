@@ -31,7 +31,11 @@ const About = () => {
               <LazyImage
                 src="/nerdware.png"
                 alt="About Nerdware System Technologies"
-                className="rounded"
+                className="rounded img-fluid w-100 h-auto"
+                style={{
+                  maxHeight: '400px',
+                  objectFit: 'cover'
+                }}
               />
             </Col>
             <Col lg={6}>

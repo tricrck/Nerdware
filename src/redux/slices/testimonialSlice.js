@@ -1,4 +1,3 @@
-// src/redux/slices/testimonialSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
