@@ -7,13 +7,14 @@ import Services from './pages/Services';
 import Portfolio from './pages/Portfolio';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
+import Error404 from './pages/Error404';
 
 function App() {
   return (
       <div className="app">
         <Header />
         <Routes>
-          <Route path="*" element={<Home />} />
+          <Route path="*" element={<Error404 />} />
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
