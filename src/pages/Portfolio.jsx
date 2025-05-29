@@ -11,10 +11,10 @@ const Portfolio = () => {
       title: 'E-commerce Platform',
       category: 'web',
       description: 'A comprehensive e-commerce solution that increased customer conversion by 75%.',
-      client: 'Timothy Talam',
+      client: 'Patrick Cheruiyot',
       technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
       image: 'https://raw.githubusercontent.com/nerdwareke/Nerdware-Website/refs/heads/main/media/images/valpo_graduate.png',
-      link: 'https://github.com/nerdwareke'
+      link: 'https://money-manager-frontend.onrender.com/'
     },
     {
       id: 2,
@@ -54,7 +54,7 @@ const Portfolio = () => {
       client: 'Nerdware Initiative',
       technologies: ['React', 'Django', 'PostgreSQL', 'AWS'],
       image: 'https://raw.githubusercontent.com/nerdwareke/Nerdware-Website/refs/heads/main/media/images/valpo_graduate.png',
-      link: 'https://github.com/nerdwareke'
+      link: 'https://cloudkids.netlify.app/'
     },
     {
       id: 6,
