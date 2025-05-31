@@ -12,8 +12,8 @@ const Portfolio = () => {
       category: 'web',
       description: 'A comprehensive e-commerce solution that increased customer conversion by 75%.',
       client: 'Patrick Cheruiyot',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      image: 'https://raw.githubusercontent.com/nerdwareke/Nerdware-Website/refs/heads/main/media/images/valpo_graduate.png',
+      technologies: ['React', 'Express', 'Node.js', 'MongoDB', 'Stripe'],
+      image: `https://api.microlink.io/?url=${encodeURIComponent('https://money-manager-frontend.onrender.com/')}&screenshot=true&embed=screenshot.url`,
       link: 'https://money-manager-frontend.onrender.com/'
     },
     {
@@ -23,7 +23,7 @@ const Portfolio = () => {
       description: 'Mobile app to streamline tenant-landlord connections for rental units.',
       client: 'Susan Chepkemoi',
       technologies: ['React Native', 'Firebase', 'Google Maps API'],
-      image: 'https://raw.githubusercontent.com/nerdwareke/Nerdware-Website/refs/heads/main/media/images/valpo_graduate.png',
+      image: `https://api.microlink.io/?url=${encodeURIComponent('https://github.com/nerdwareke')}&screenshot=true&embed=screenshot.url`,
       link: 'https://github.com/nerdwareke'
     },
     {
@@ -33,7 +33,7 @@ const Portfolio = () => {
       description: 'Comprehensive SEO strategy that improved rankings and increased business orders.',
       client: 'Elijah Khajira - EllyHill',
       technologies: ['SEO Tools', 'Analytics', 'Content Strategy'],
-      image: 'https://raw.githubusercontent.com/nerdwareke/Nerdware-Website/refs/heads/main/media/images/valpo_graduate.png',
+      image: `https://api.microlink.io/?url=${encodeURIComponent('https://github.com/nerdwareke')}&screenshot=true&embed=screenshot.url`,
       link: 'https://github.com/nerdwareke'
     },
     {
@@ -43,7 +43,7 @@ const Portfolio = () => {
       description: 'E-commerce app for online shoe sales with order and delivery features.',
       client: 'Jescinta C',
       technologies: ['Vue.js', 'Laravel', 'MySQL', 'Payment Gateway'],
-      image: 'https://raw.githubusercontent.com/nerdwareke/Nerdware-Website/refs/heads/main/media/images/valpo_graduate.png',
+      image: `https://api.microlink.io/?url=${encodeURIComponent('https://github.com/nerdwareke')}&screenshot=true&embed=screenshot.url`,
       link: 'https://github.com/nerdwareke'
     },
     {
@@ -52,8 +52,8 @@ const Portfolio = () => {
       category: 'web',
       description: 'Educational platform aimed at creating societal impact through technology.',
       client: 'Nerdware Initiative',
-      technologies: ['React', 'Django', 'PostgreSQL', 'AWS'],
-      image: 'https://raw.githubusercontent.com/nerdwareke/Nerdware-Website/refs/heads/main/media/images/valpo_graduate.png',
+      technologies: ['React', 'Netliify'],
+      image: `https://api.microlink.io/?url=${encodeURIComponent('https://cloudkids.netlify.app/')}&screenshot=true&embed=screenshot.url`,
       link: 'https://cloudkids.netlify.app/'
     },
     {
@@ -63,7 +63,7 @@ const Portfolio = () => {
       description: 'Custom analytics dashboard for business intelligence and reporting.',
       client: 'Corporate Client',
       technologies: ['D3.js', 'Python', 'Flask', 'Chart.js'],
-      image: 'https://raw.githubusercontent.com/nerdwareke/Nerdware-Website/refs/heads/main/media/images/valpo_graduate.png',
+      image: `https://api.microlink.io/?url=${encodeURIComponent('https://github.com/nerdwareke')}&screenshot=true&embed=screenshot.url`,
       link: 'https://github.com/nerdwareke'
     }
   ];
